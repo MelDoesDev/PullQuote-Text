@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+    <!--
+        Author: Melissa Morris
+        Date: 2/2/19
+        Course: CIS 241-3167 Chapter 4 Assignment
+        Text taken from: Living In Information, Responsive Design for Digital Places (Book Excerpt) by Jorge Arango
+        https://uxmag.com/articles/living-in-information-responsible-design-for-digital-places-a-book-excerpt
+     -->
+     <style>
+            body{
+                background-color:mintcream;
+            }
+            h1, h2, h3, p, .pullquote{
+                font-family: Arial, Helvetica, sans-serif;
+                width:75%;
+                margin: 0 12.5% 0 12.5%;
+            }
+            div#box {
+                background-color:rgba(255, 255, 255, 0.63);
+            }
+            div#main {
+                background-image: url("images/architecturaldesign.jpg");
+                background-size:cover;
+                background-position:bottom;
+                background-color: rgba(255,255,255,0.9);
+                background-blend-mode: lighten;
+                box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+                padding: 20px 10% 20px 10%;
+                margin: 0 20px 0 20px;
+            }
+            h1, h2{
+                color:darkturquoise;
+            }
+            h3, #emphasis {
+                color:slategray;
+            }
+            .pullquote {
+                clear: right;
+                color:darkturquoise;
+                float: right;
+                width: 200px;
+                padding: 10px;
+                font-size: 20px;
+                margin: 20px 0 10px 10px;
+                font-style: italic;
+            }
+        </style>
+     <meta charset="UTF-8"> 
+     <script src = "scripts/jquery-3.3.1.min.js"></script>
+     <script>
+     $(function(){
+        $('span.pq').each(function(){
+            var quote=$(this).clone();
+            quote.removeClass('pq');
+            quote.addClass('pullquote');
+            $(this).before(quote);
+        });
+     });
+     </script>
+</head>
+<title>Living In Information, Responsive Design for Digital Places</title>
+<body>
+        <div id="main">
+    <h1>Living In Information, <br> Responsive Design for Digital Places</h1>
+    <h3>Jorge Arango</h3>
+    <br>
+    <div id="box">
+    <h2>Design</h2>
+        <p>
+        When many people think of design, they think of aesthetics: how something "looks and feels". 
+        They may sense something has "good design"because it stands out from among similar products because of the way it looks. 
+        <span id="emphasis">This is a misunderstanding. </span>
+        <span class="pq">Design is not a characteristic of things; it’s a process by which things are made.</span> 
+        <span id="emphasis">It’s more of a verb than a noun.</span> 
+        </p>
+        <p>
+        When we’re creating something new, design allows us to simulate possible solutions so that we can experience them without incurring the costs of building the final product. 
+        We do this by understanding the context the thing we’re designing will address 
+        (including the needs and expectations of the people who will use it) 
+        and producing models of varying fidelity that allow us to envision and test alternatives. 
+        <span id="emphasis">For any one challenge, there are many possible ways forward.</span>
+        Design allows us to explore and refine the ones that best serve the needs of the project. 
+        <span class="pq">Design is how we make possibilities tangible.</span>
+        </p>
+        <br><br>
+    <h2>The Design of Environments</h2>
+        <p>
+        The first designed environments were very simple; 
+        they came about as our forebears experimented with various ways of sheltering themselves, their families, and their goods from the elements. 
+        This process of trial-and-error produced a set of best practices, leading to the establishment of a vernacular craft tradition of building that is still alive in many rural areas. 
+        But eventually, <span id="emphasis">building design moved beyond the functional basics</span> demanded by shelter to serve other goals, including the creation of a tribal identity and mediation of the group’s relationship with the supernatural. 
+        Architecture developed a formal language that allowed it to serve these roles above and beyond the mere provision of shelter.
+        </p>
+        <p>
+        <span class="pq">Of course, environments don’t just affect us at a personal level; they also influence our ability to function socially.</span> 
+        For generations, the well or fountain in the town square served as the meeting place where citizens found out what their neighbors were thinking, 
+        the guildhall enabled colleagues to work out differences and embark on joint endeavors, and the assembly hall hosted lawmakers as they discussed and developed laws. 
+        As we move more of these and other social and civic activities to information environments, it behooves us to vie for their integrity and usefulness. 
+        Over the centuries, architects have developed various design principles that can guide us in the pursuit of these goals. 
+        </p>
+        </div>
+    </div>
+</body>
+</html>
